@@ -12,6 +12,29 @@ const user = {
 // here Object destructuring helps
 const {name, age, city} = user;
 
-console.log(name);
-console.log(age);
-console.log(city);
+console.log(name, age, city);
+
+const {name: userName, age: userAge} = user;
+console.log(userName, userAge);
+console.log()
+// Nested Object Destructuring
+const person = {
+    name: "Rahul",
+    address: {
+        City: "Patna",
+        state: "Bihar"
+    }
+};
+
+const {
+    address: {City, state}
+} = person;
+
+console.log(City, state);
+
+// Diff Array & Object Destructuring
+const guest = {guestName: "Suraj", guestAge: 20};
+const {gustName, guestAge} = guest;
+
+const colors = ["Red", "Green", "Blue"];;
+const [r,g,b]  = colors;
